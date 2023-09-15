@@ -16,9 +16,7 @@ export class AppComponent {
   col:boolean=false;
   shop:boolean=false;
   dine:boolean=false;
-  selected=["","","","",""];
   showChange(data:any,event:any){
-    console.log(data);
     if(data==this.activities[0]){
       if(event.target.checked==true){
         this.swim=true;
