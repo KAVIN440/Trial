@@ -1,0 +1,37 @@
+<!--//angular directives: ngIf-->
+<div *ngIf = "players.length>0">PlayersList</div>
+<br>
+<div *ngIf = "players.length==0">NO players</div>
+
+<!--//angular directives: ngFor-->
+<!-- {{}}:string interpoltion -->
+<div>                                                          
+  <li *ngFor="let i of players">{{i}}</li>
+</div>
+
+<!--Example of one way data binding-->
+<div>
+  <p>{{message}}</p>
+</div>
+
+<!--Example of two way data binding-->
+<div>
+  <input [(ngModel)]="inputValue" placeholder="Type Here">
+  <p>You typed:{{inputValue}}</p>
+</div>
+
+<div>
+  <div *ngFor="let i of activities">
+    <input type="checkbox" id="i" (change)="showChange(i,$event);" >
+    {{i}}
+    <br>
+  </div>
+  <div>  
+    <h4>You have selected:</h4>                                                        
+    <p *ngIf="swim">Swimming</p>
+    <p *ngIf="break">Breakfast</p>
+    <p *ngIf="col">College</p>
+    <p *ngIf="shop">Shopping</p>
+    <p *ngIf="dine">Dinner</p>
+  </div>
+</div>
